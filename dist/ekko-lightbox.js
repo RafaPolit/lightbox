@@ -597,9 +597,6 @@ var Lightbox = (function ($) {
 				var maxWidth = Math.min(width + widthBorderAndPadding, this._config.doc.body.clientWidth - addMargin, this._config.maxWidth);
 
 				if (width + widthBorderAndPadding > maxWidth) {
-					console.log('Adjust height:', width);
-					console.log('Adjust widthBorderAndPadding:', widthBorderAndPadding);
-					console.log('Adjust maxWidth:', maxWidth);
 					height = (maxWidth - widthBorderAndPadding - discountMargin) / imageAspecRatio;
 					width = maxWidth;
 				} else width = width + widthBorderAndPadding;
@@ -615,13 +612,12 @@ var Lightbox = (function ($) {
 
 				var borderPadding = this._padding.top + this._padding.bottom + this._border.bottom + this._border.top;
 
-				//calculated each time as resizing the window can cause them to change due to Bootstraps fluid yMargins
-				var yMargins = parseFloat(this._$modalDialog.css('margin-top')) + parseFloat(this._$modalDialog.css('margin-bottom'));
+				//calculated each time as resizing the window can cause them to change due to Bootstraps fluid margins
+				var margins = parseFloat(this._$modalDialog.css('margin-top')) + parseFloat(this._$modalDialog.css('margin-bottom'));
 
-				var maxHeight = Math.min(height, $(window).height() - borderPadding - yMargins - headerHeight - footerHeight, this._config.maxHeight - borderPadding - headerHeight - footerHeight);
+				var maxHeight = Math.min(height, $(window).height() - borderPadding - margins - headerHeight - footerHeight, this._config.maxHeight - borderPadding - headerHeight - footerHeight);
 
 				if (height > maxHeight) {
-					console.log('aqui?');
 					// if height > the available height, scale down the width
 					width = Math.ceil(maxHeight * imageAspecRatio) + widthBorderAndPadding;
 				}

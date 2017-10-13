@@ -620,7 +620,6 @@ const Lightbox = (($) => {
 			let maxHeight = Math.min(height, $(window).height() - borderPadding - margins - headerHeight - footerHeight, this._config.maxHeight - borderPadding - headerHeight - footerHeight);
 
 			if(height > maxHeight) {
-				console.log('aqui?');
 				// if height > the available height, scale down the width
 				width = Math.ceil(maxHeight * imageAspecRatio) + widthBorderAndPadding;
 			}

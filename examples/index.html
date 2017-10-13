@@ -199,6 +199,13 @@
                                     <td><code>data-(width|height)="[0-9]+"</code></td>
                                 </tr>
                                 <tr>
+                                    <td>maxWidth / maxHeight</td>
+                                    <td>integer</td>
+                                    <td>9999</td>
+                                    <td>Limit the container width / height</td>
+                                    <td><code>data-(max-width|max-height)="[0-9]+"</code></td>
+                                </tr>
+                                <tr>
                                     <td>alwaysShowClose</td>
                                     <td>boolean</td>
                                     <td><code>false</code></td>
@@ -303,6 +310,7 @@
                     <ul>
                         <li><a href="#single-image">Single Image</a></li>
                         <li><a href="#image-gallery">Image Gallery</a></li>
+                        <li><a href="#limit-size">Limit Image Size</a></li>
                         <li><a href="#videos">Videos</a></li>
                         <li><a href="#videos-gallery">Gallery of Videos</a></li>
                         <li><a href="#mixed-gallery">Mixed gallery</a></li>
@@ -356,37 +364,17 @@
                         </div>
                     </div>
                     <code class="html" data-code="example-2"></code>
-                    <h3 id="image-gallery">Image Gallery</h3>
-                    <p>Galleries are created by adding the <code>data-gallery</code> attribute.</p>
-                    <div data-code="example-2">
-                        <div class="row">
-                            <div class="offset-md-2 col-md-8">
-                                <div class="row">
-                                    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                                        <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
-                                    </a>
-                                    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                                        <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
-                                    </a>
-                                    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                                        <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
-                                    </a>
-                                </div>
-                                <div class="row">
-                                    <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                                        <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
-                                    </a>
-                                    <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                                        <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
-                                    </a>
-                                    <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                                        <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
-                                    </a>
-                                </div>
-                            </div>
+
+                    <h3 id="single-image">Limit Image Size</h3>
+                    <p>Note: uses modal plugin limiting via <code>data-max-width</code> (or <code>data-max-height</code>)</p>
+                    <div class="row">
+                        <div class="offset-sm-4 col-sm-3" data-code="example-10">
+                            <a href="https://unsplash.it/1200/768.jpg?image=250" data-toggle="lightbox" data-max-width="600">
+                                <img src="https://unsplash.it/600.jpg?image=250" class="img-fluid">
+                            </a>
                         </div>
                     </div>
-                    <code class="html" data-code="example-2"></code>
+                    <code class="html" data-code="example-10"></code>
 
                     <h3 id="videos">Videos</h3>
                     <h4>YouTube</h4>
